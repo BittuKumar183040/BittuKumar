@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bittu kumar | Personal Website</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Personal Website">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Bittu Kumar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Title Logo -->
+	<link rel="icon" href="image/logo.png" type="image/x-icon">
+	<!--Online links and Cdn -->
+<link href="https://fonts.googleapis.com/css2?family=Akronim&family=Monoton&family=Nunito:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/stylehome.css">
+<link rel="stylesheet" type="text/css" href="style/scroll.css">
+</head>
+
+<body >
+<!-- Nav Bar -->
+
+<nav class="nav-bar">
+	<a href="https://github.com/BittuKumar183040/BittuKumar/tree/master/docs">
+	<div class="brand">
+		<img class="logo" src="image/logo.png">
+		<p class="brand-name">Bittu Kumar</p>
+	</div></a>
+	<div class="menu">
+		<ol>
+			<a href="#home"><li>Home</li></a>
+			<a href="#profile"><li>Profile</li></a>
+			<a href="#gallery"><li>Gallery</li></a>
+			<a href="#contactUs"><li>Contact Us</li></a>
+		</ol>
+	</div>
+	<div class="menu-lines" onClick="showHide()">
+		<div id="line"></div>
+		<div id="line"></div>
+		<div id="line"></div>
+	</div>
+</nav>
+<!-- top main Area -->
+<div class="picContainerMain"  id="home">
+	<img class="topPicMain" src="image/front.jpg">
+	<div class="dataContainerMain" data-aos="fade-up" data-aos-delay="1500">
+		<p class="topHeadingMain" data-aos="fade-left" data-aos-delay="1500">Bittu Kumar.</p>
+		<p class="topSubHeadingMain">Hello, my name is Bittu Kumar, I am a <span> Web Designer </span>and I love to create a animated webpages which looks very Attractive</p>
+		<ol>
+			<li>Web Design</li>
+			<li>Front-end</li>
+		</ol>
+		<a href="#contactUs"><p class="contactBtnMain">Contact Me</p></a>
+	</div>
+</div>
+<!-- Profile -->
+
+<div class="profile-container" id="profile">
+<div style="position: relative;top:40%;left: 50%;transform: translate(-50%, -50%);">
+	<p class="pro-head" data-aos="fade-up">Profile</p>
+	<p class="pro-subhead" data-aos="fade-right">I'm a creative Web developer</p>
+	<hr color=gray>
+	<div class="profile-body" data-aos="fade-up">
+		<div class="pro-aboutme">
+			<p class="pro-aboutme-head">About me</p>
+			<p class="pro-aboutme-subhead">
+				I am a creative and design rich animated web developer. I am a fresher
+				with a good knowledge of front-end techniques. I create websites with many webpages with rich details. I love spending time on creating and fixing missing details in the webpages. I have never work with team but I want to. Because it let us learn faster and much more. As the saying goes:
+				<br><span>"Two heads are better than one"</span>.
+			</p>
+		</div>
+		<div class="pro-pic">
+			<img src="image/mainpic.png">
+		</div>
+		<div class="pro-details">
+			<p class="pro-details-head">Details</p>
+			<p class="pro-details-head2">Name:</p>
+			<p class="pro-details-subhead">Bittu Kumar</p>
+			<p class="pro-details-head2">Age:</p>
+			<p class="pro-details-subhead">20 years</p>
+			<p class="pro-details-head2">Location:</p>
+			<p class="pro-details-subhead">Anishabad, Patna
+			<br>Pin - 800002<br> <strong>( INDIA )</strong></p>
+		</div>
+	</div>
+	<hr color=gray>
+</div>
+</div>
+
+<!-- Gallery Section  -->
+<div class="image-container" id="gallery">
+	<div style="width:100%;text-align: center;">
+		<p style="color:black" class="pro-head">Gallery</p>
+		<p class="pro-subhead">Contains memorial images of mine</p>
+		<hr style="color:gray;width:90%;margin-left:5%">
+	</div>
+	
+	<div class="pic-size" data-aos="flip-right">
+		<img src="image/1.jpg">
+		<p class="caption">See In Large</p>
+	</div>
+	<div class="pic-size" data-aos="flip-up">
+		<img src="image/3.jpg">
+		<p class="caption">See In Large</p>
+	</div>
+	<div class="pic-size" data-aos="flip-right">
+		<img src="image/2.jpg">
+		<p class="caption">See In Large</p>
+	</div>
+	<div class="pic-size" data-aos="flip-left">
+		<img src="image/4.jpg">
+		<p class="caption">See In Large</p>
+	</div>
+	<div class="pic-size" data-aos="flip-right">
+		<img src="image/5.jpg">
+		<p class="caption">See In Large</p>
+	</div>
+	<hr style="color:gray;width:90%;margin-left:5%">
+</div>
+
+<!-- Bottom Contact Us Details -->
+
+<section class="contactUs" id="contactUs">
+		<p class="contactUs-heading" data-aos="fade-up">Contact Me</p>
+		<p class="contactUs-subheading" data-aos="fade-right">Wants to create a Website ( Let me help you )</p>
+		<hr style="color:gray;width:90%;margin-left:5%">
+	<div class="contactUs-details">
+		<div class="services"  data-aos="fade-left">
+			<ol>
+			<p class="services-heading">Services</p>
+			<li>Branding</li>
+			<li>Web Developement</li>
+			<li>Maintaining websites</li>
+			<li>Server Handling</li>
+			<li>Advertising</li>
+			</ol>
+		</div>
+		<div class="contact-info" data-aos="fade-up">
+			<p class="contactInfo">Contact Info</p>
+			<p class="contact-heading">Location</p>
+			<p class="contact-subheading">Near Beur Jail, Anishabad,<br> Patna - 800002 <br>(India)</p>
+			<p class="contact-heading">Phone No</p>
+			<p class="contact-subheading">+91-756-387-2977</p>
+			<p class="contact-heading">Email</p>
+			<p class="contact-subheading">bk183040@gmail.com</p>
+		</div>
+	<div class="help" data-aos="fade-right">
+			<p class="help-heading">Need Help ? Fill the <span>Box</span></p>
+			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSee3JwAEuAECUuOuQY_WUqzgzXvGB3SER1IlGA1l6jORO1QXQ/formResponse" method="POST">
+			<input type="text" name="entry.2134247752" placeholder="First Name" required autocomplete="off">
+			<input type="text" name="entry.1204090953" placeholder="Last Name" required autocomplete="off">
+			<input type="email" name="emailAddress" placeholder="Email Address" required autocomplete="off">
+			<br>
+			<Button class="button-done" type="submit" value="DONE">Done</Button>
+			<!-- <p class="button-done">Done</p> -->
+			</form>
+		</div>
+	</div>
+</section>
+
+<!-- Last End -->
+<footer>
+<div class="footer-element">
+	<p class="copy">&copy 2020 Bittu Kumar - All rights reserved.</p>
+
+</div>
+<script>
+
+
+// menu popup
+
+function showHide()
+{
+	let menubar=document.querySelector(".menu");
+	let line=document.querySelectorAll(".menu-lines #line");
+	if(menubar.style.transform==="")
+	{
+		menubar.style.transform="translate(0vh) rotateZ(360deg)";
+		line[0].style.transform="rotateZ(45deg)";
+		line[2].style.transform="rotateZ(-45deg)";
+		line[1].style.display="none";
+	}
+	else
+	{
+		menubar.style.transform="";
+		line[0].style.transform="rotateZ(0)";
+		line[2].style.transform="rotateZ(0)";
+		line[1].style.display="block";
+	}
+}
+
+// scroll animation
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/scroll.js"></script>
+<script type="text/javascript">
+	AOS.init({
+		duration:1500,
+	});
+</script>
+
+
+</footer>
+</body>
+</html>
