@@ -18,7 +18,7 @@ body
 {
 	width:100%;
 	height:40px;
-	background-color:rgba(0,0,0,0);
+	background-color:rgba(0,0,0,0.2);
 	position: fixed;
 	top:0px;left:0px;
 	/*box-shadow: 0px 2px 1px #258599, 0px 3px 1px blue,0px 4px 2px red;*/
@@ -183,7 +183,7 @@ a{text-decoration: none;}
 .dataContainerMain
 {
 	position: absolute;
-	top:20%;
+	top:30%;
 	left:30px;
 	width:50%;
 	font-family:'Nunito', cursive;
@@ -200,6 +200,7 @@ a{text-decoration: none;}
 	margin:0;padding:0;
 	color:#fff;
 	font-size: 1em;
+	font-family: Caveat;
 }
 .topSubHeadingMain span
 {
@@ -218,20 +219,40 @@ a{text-decoration: none;}
 }
 .contactBtnMain
 {
-	margin:20px 0;
+	margin:40px 0;
 	padding:5px 10px;
 	color:#fff;
 	font-size: 1em;
 	background:#ED401B; 
 	display: inline-block;
 	border:2px solid #fff;
-	border-radius: 10px;
+	border-radius: 2px;
 	font-weight: bold;
 	letter-spacing: 1px;
 	cursor: hand;
 	user-select: none;
 	box-shadow: 0 0 10px black;
 	transition: color .2s, background .2s,border .3s;
+}
+.contactBtnMain:after
+{
+	content:"";
+	position: absolute;
+	display: inline-block;
+	background: #fff;
+	height:35px;width:2px;
+	border-radius: 2px;
+	box-shadow: 0 0 10px 0px white;
+	transform: translate(10px, -6px);
+	animation:buttonshine 3s infinite alternate ease;
+}
+@keyframes buttonshine
+{
+	0%{transform:translate(10px, -6px);}
+	30%{transform:translate(10px, -6px);}
+	60%{transform:translate(10px, -6px);}
+	90%{transform:translate(10px, -6px);}
+	100%{transform:translate(-103px, -6px);}
 }
 .contactBtnMain:hover
 {
