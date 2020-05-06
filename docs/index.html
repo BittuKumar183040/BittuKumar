@@ -15,17 +15,14 @@
 <link rel="stylesheet" type="text/css" href="style/stylehome.css">
 <link rel="stylesheet" type="text/css" href="style/scroll.css">
 </head>
-
-<body >
 <!-- Nav Bar -->
-
 <nav class="nav-bar">
 	<a href="https://github.com/BittuKumar183040/BittuKumar/tree/master/docs">
 	<div class="brand">
 		<img class="logo" src="image/logo.png">
 		<p class="brand-name">Bittu Kumar</p>
 	</div></a>
-	<div class="menu">
+<!-- 	<div class="menu">
 		<ol>
 			<a href="#home"><li>Home</li></a>
 			<a href="#profile"><li>Profile</li></a>
@@ -37,41 +34,43 @@
 		<div id="line"></div>
 		<div id="line"></div>
 		<div id="line"></div>
-	</div>
+	</div> -->
 </nav>
+
+<body >
+
+
 <!-- top main Area -->
-<div class="picContainerMain"  id="home">
+<div class="picContainerMain" id="home">
 	<img class="topPicMain" src="image/frontFilter.jpg">
 	<div class="dataContainerMain" data-aos="fade-up" data-aos-delay="1500">
 		<p class="topHeadingMain" data-aos="fade-left" data-aos-delay="1500">Bittu Kumar.</p>
 		<p class="topSubHeadingMain">Hello, my name is Bittu Kumar, I am a <span> Web Designer </span>and I love to create a animated webpages which looks attractive.</p>
-	<!-- 	<ol>
-			<li>Web Design</li>
-			<li>Front-end</li>
-		</ol> -->
+
 		<a href="#contactUs"><p class="contactBtnMain">Contact Me</p></a>
 	</div>
 </div>
+
 <!-- Profile -->
 
 <div class="profile-container" id="profile">
 <div style="position: relative;top:40%;left: 50%;transform: translate(-50%, -50%);">
-	<p class="pro-head" data-aos="fade-up">Profile</p>
+	<p class="pro-head" data-aos="fade-down">Profile</p>
 	<p class="pro-subhead" data-aos="fade-right">I'm a creative Web developer</p>
-	<hr color=gray>
-	<div class="profile-body" data-aos="fade-up">
-		<div class="pro-aboutme">
+	<hr color=gray data-aos="fade-left">
+	<div class="profile-body">
+		<div class="pro-aboutme" data-aos="fade-right">
 			<p class="pro-aboutme-head">About me</p>
 			<p class="pro-aboutme-subhead">
-				I am a creative and design rich animated web pages. I am a fresher
+				I am a creative and design rich animated web developer. I am a fresher
 				with a good knowledge of front-end techniques. I create websites with many webpages with rich details. I love spending time on creating and fixing missing details in the webpages. I have never work with team but I want to. Because it let us learn faster and much more. As the saying goes:
 				<br><span>"Two heads are better than one"</span>.
 			</p>
 		</div>
-		<div class="pro-pic">
+		<div class="pro-pic" data-aos="fade-up">
 			<img src="image/mainpic.png">
 		</div>
-		<div class="pro-details">
+		<div class="pro-details" data-aos="fade-left">
 			<p class="pro-details-head">Details</p>
 			<p class="pro-details-head2">Name:</p>
 			<p class="pro-details-subhead">Bittu Kumar</p>
@@ -82,16 +81,16 @@
 			<br>Pin - 800002<br> <strong>( INDIA )</strong></p>
 		</div>
 	</div>
-	<hr color=gray>
+	<hr color=gray data-aos="fade-right">
 </div>
 </div>
 
 <!-- Gallery Section  -->
 <div class="image-container" id="gallery">
 	<div style="width:100%;text-align: center;">
-		<p style="color:black" class="pro-head">Gallery</p>
-		<p class="pro-subhead">Contains memorial images of mine</p>
-		<hr style="color:gray;width:90%;margin-left:5%">
+		<p style="color:black" class="pro-head" data-aos="fade-right">Gallery</p>
+		<p class="pro-subhead"  data-aos="fade-left">Contains memorial images of mine</p>
+		<hr style="color:gray;width:90%;margin-left:5%"  data-aos="fade-right">
 	</div>
 	
 	<div class="pic-size" data-aos="flip-right">
@@ -133,7 +132,7 @@
 			<li>Server Handling</li>
 			<li>Advertising</li>
 			</ol>
-		</div>
+		</div> 
 		<div class="contact-info" data-aos="fade-up">
 			<p class="contactInfo">Contact Info</p>
 			<p class="contact-heading">Location</p>
@@ -143,7 +142,7 @@
 			<p class="contact-heading">Email</p>
 			<p class="contact-subheading">bk183040@gmail.com</p>
 		</div>
-	<div class="help" data-aos="fade-right">
+		<div class="help" data-aos="fade-right">
 			<p class="help-heading">Need Help ? Fill the <span>Box</span></p>
 			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSee3JwAEuAECUuOuQY_WUqzgzXvGB3SER1IlGA1l6jORO1QXQ/formResponse" method="POST">
 			<input type="text" name="entry.2134247752" placeholder="First Name" required autocomplete="off">
@@ -152,9 +151,8 @@
 			<input type="" name="entry.1382937414" placeholder="Description" autocomplete="off" style=" height:40px">
 			<br>
 			<Button class="button-done" type="submit" value="DONE">Done</Button>
-			<!-- <p class="button-done">Done</p> -->
 			</form>
-		</div>
+		</div> 
 	</div>
 </section>
 
@@ -164,30 +162,32 @@
 	<p class="copy">&copy 2020 Bittu Kumar - All rights reserved.</p>
 
 </div>
+
 <script>
 
 
-// menu popup
-
-function showHide()
-{
-	let menubar=document.querySelector(".menu");
-	let line=document.querySelectorAll(".menu-lines #line");
-	if(menubar.style.transform==="")
-	{
-		menubar.style.transform="translate(0vh) rotateZ(360deg)";
-		line[0].style.transform="rotateZ(45deg)";
-		line[2].style.transform="rotateZ(-45deg)";
-		line[1].style.display="none";
-	}
-	else
-	{
-		menubar.style.transform="";
-		line[0].style.transform="rotateZ(0)";
-		line[2].style.transform="rotateZ(0)";
-		line[1].style.display="block";
-	}
-}
+// // menu popup
+// let menubar=document.querySelector(".menu");
+// function showHide()
+// {
+	
+// 	let line=document.querySelectorAll(".menu-lines #line");
+// 	if(menubar.style.transform==="")
+// 	{
+// 		menubar.style.transform="translate(0vh) rotateZ(360deg)";
+// 		menubar.style.display="block";
+// 		line[0].style.transform="rotateZ(45deg)";
+// 		line[2].style.transform="rotateZ(-45deg)";
+// 		line[1].style.display="none";
+// 	}
+// 	else
+// 	{
+// 		menubar.style.transform="";
+// 		line[0].style.transform="rotateZ(0)";
+// 		line[2].style.transform="rotateZ(0)";
+// 		line[1].style.display="block";
+// 	}
+// }
 
 // scroll animation
 
@@ -199,7 +199,6 @@ function showHide()
 		duration:1500,
 	});
 </script>
-
 
 </footer>
 </body>

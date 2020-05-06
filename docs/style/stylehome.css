@@ -2,7 +2,6 @@ html{
 		scroll-behavior: smooth;
 		opacity: 1;
 	}
-
 body
 {
 	margin: 0px;
@@ -18,8 +17,8 @@ body
 {
 	width:100%;
 	height:40px;
-	background-color:rgba(0,0,0,0.2);
-	position: fixed;
+	background-color:rgba(0,0,0,0);
+	position: absolute;
 	top:0px;left:0px;
 	/*box-shadow: 0px 2px 1px #258599, 0px 3px 1px blue,0px 4px 2px red;*/
 	border-radius: 0 0 5px 5px;
@@ -28,7 +27,7 @@ body
 }
 @keyframes navbar
 {
-	from{top:-40px;opacity: 0;}
+	from{left:-140px;opacity: 0;}
 }
 .brand
 {
@@ -55,9 +54,10 @@ body
 }
 @keyframes logo
 {
-	from{transform: rotateZ(360deg);}
+	from{transform: rotate3d(1,1,1,360deg);}
 }
 .menu{
+	display: none;
 	position: absolute;
 	top:-10px;
 	right:0px;
@@ -109,55 +109,12 @@ a{text-decoration: none;}
 	transition: transform .2s;
 }
 
-@media screen and (max-width:683px)/*(max-width: 683px)*/
-{
-	.menu-lines
-	{
-		display: block;
-		z-index: 5;
-	}
-	.menu ol
-	{
-		flex-direction: column;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		margin:40px;
-	}
-	.menu ol a li:last-child
-	{
-		margin-right:0px;
-	}
-	.menu ol a
-	{
-		margin-top: 20%;
-	}
-	.menu 
-	{
-		position: fixed;
-		left:0px;
-		height:100%;
-		transform:translateY(110vh);
-		opacity:0.9;
-		background: linear-gradient(270deg, #c5b918, #12c577, #9412c5);
-		background-size: 600% 600%;
-		animation: AnimationName 5s ease infinite;
-		/*transform: translateX(40%);*/
-	}
-
-	@keyframes AnimationName 
-	{
-  		0%{background-position:0% 50%}
-   		50%{background-position:100% 50%}
-  		100%{background-position:0% 50%}
-	}
-}
 /*main image container*/
 
 .picContainerMain
 {
 	height:10vh;
-	width:90%;
+	width:95%;
 	margin:45vh auto;
 	position: relative;
 	display: flex;
@@ -180,6 +137,7 @@ a{text-decoration: none;}
 
 }
 /*Left data*/
+
 .dataContainerMain
 {
 	position: absolute;
@@ -264,6 +222,10 @@ a{text-decoration: none;}
 {
 	opacity: .5;
 }
+
+/* Works on both phone and pc */
+
+
 /* Profile - container */
 
 .profile-container
@@ -337,17 +299,7 @@ a{text-decoration: none;}
 	border:4px solid gray;
 	margin:50px 45px 0px 45px;
 }
-@media screen and (max-width:720px)
-{
-	.pro-pic{display: none;}
-	.pro-aboutme{margin-right:25px;}
-	.pro-details{
-		background-image:URL('https://github.com/BittuKumar183040/BittuKumar/blob/master/docs/image/mainpic.png?raw=true');
-		background-size:150px 150px;
-		background-repeat: no-repeat;
-		background-position: right top;
-	}
-}
+
 .pro-pic img
 {
 	height:300px;
@@ -484,6 +436,7 @@ animation: AnimationName 17s ease infinite;
 /* Contact us */
 .contactUs
 {
+
 	background: linear-gradient(270deg, #e9a44b, #907de9, #e97d9b);
 	background-size: 600% 600%;
 	animation: contactus 15s ease infinite;
@@ -521,15 +474,12 @@ animation: AnimationName 17s ease infinite;
 	display: flex;
 	text-align: left;
 	flex-wrap:wrap;
+	justify-content:space-around;
 	color:#fff;
-	margin:0 10%;
 }
 .services, .contact-info
 {
 	text-align: left;
-	margin:0px 5%;
-	flex-grow: 1;
-	flex-basis: 0;
 }
 .services-heading,.contactInfo,.help-heading
 {
@@ -539,31 +489,43 @@ animation: AnimationName 17s ease infinite;
 	text-transform: uppercase;
 
 }
-.services ol li
+.services ol
 {
-	list-style: none;
+	list-style-type: none;
+	padding: 0px;
 	font-size: 1.2em;
-	padding:5px 0px;
 }
+
 .contact-heading
 {
 	font-size: 1.2em;
-	margin:0px;
 	font-weight: bold;
+	margin: 0px;
 }
 .contact-subheading
 {
 	font-size:1em;
-	margin: 0 0 5px 0;
+	margin: 0px;
 }
 .help
 {
-	flex-grow: 2;
-	flex-basis: 0;
 	text-align: center;
+}
+.help form
+{
+	margin-left:50%;
+	transform: translateX(-50%);
+}
+.help form input
+{
+	display: block;
+	margin-left:50%;
+	transform: translateX(-50%);
+	margin-top:10px;
 }
 .help-heading span
 {
+	display: inline-block;
 	color:#fff;
 	padding:5px 10px;
 	font-family: 'Caveat', cursive;
@@ -577,8 +539,7 @@ animation: AnimationName 17s ease infinite;
 	padding:5px 10px;
 	border-radius: 15px;
 	border: 2px solid #fff;
-	margin: 5px;
-	width:300px;
+	/*width:80%;*/
 	box-shadow: 2px 2px 5px #000;
 	transition: box-shadow .2s;
 }
@@ -591,7 +552,7 @@ animation: AnimationName 17s ease infinite;
 	color:#fff;
 	background-color: #343a40;
 	/*text-transform: uppercase;*/
-	padding:5px 25px;
+	padding:5px 25px 5px 25px;
 	font-weight: bold;
 	font-family: 'Caveat', cursive;
 	border:2px solid #fff;
@@ -610,15 +571,6 @@ animation: AnimationName 17s ease infinite;
 	box-shadow: 5px 5px 5px gray;
 }
 
-@media only screen and (max-width:750px)
-{
-	.menu ol a li{padding:5px 5px;margin:0 5px;font-size:0.9rem;}
-	.help{width:100%;margin-top:15px;border-top:2px dotted #fff;}
-	.help input{width:400px;}
-	.contactUs-details{margin:0px;}
-	.services, .contact-info{text-align: center;}
-}
-
 /*Footer end of the page*/
 
 .footer-element
@@ -627,11 +579,81 @@ animation: AnimationName 17s ease infinite;
 	width:100%;
 	background: #000;
 	height: 75px;
-	padding:5px; 
+	padding:5px 0; 
 }
 .copy
 {
 	color:#fff;
 	padding:10px 25px;
 	display: block;
+}
+
+/*Size Responsiveness Making Area*/
+
+@media screen and (max-width:720px)
+{
+	.pro-pic{display: none;}
+	.pro-aboutme{margin-right:25px;}
+	.pro-details{
+		background-image:URL('https://github.com/BittuKumar183040/BittuKumar/blob/master/docs/image/mainpic.png?raw=true');
+		background-size:150px 150px;
+		background-repeat: no-repeat;
+		background-position: right top;
+	}
+}
+@media screen and (max-width:600px) /* For Mobile Phone*/
+{
+	.pro-details
+	{
+		background-image:URL('https://github.com/BittuKumar183040/BittuKumar/blob/master/docs/image/mainpic.png?raw=true');
+		background-size:150px 150px;
+		background-color: rgba(0, 0, 0, 0);
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		margin-bottom:40px;
+	}
+	.topPicMain
+	{
+		object-fit:cover;
+		width: 100%;
+	}
+	.topHeadingMain
+	{
+		color:#49E217;
+	}
+	.services, .contact-info
+	{
+		text-align: center;
+	}
+
+
+	/*test box*/
+
+	.help
+{
+	text-align: center;
+}
+.help form
+{
+	margin-left:50%;
+	transform: translateX(-50%);
+}
+.help form input
+{
+	display: block;
+	margin-left:50%;
+	transform: translateX(-50%);
+	margin-top:10px;
+}
+
+.help input
+{
+	padding:5px 10px;
+	border-radius: 15px;
+	border: 2px solid #fff;
+	/*width:80%;*/
+	box-shadow: 2px 2px 5px #000;
+	transition: box-shadow .2s;
+}
+
 }
