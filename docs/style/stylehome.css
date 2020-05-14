@@ -366,43 +366,44 @@ animation: AnimationName 17s ease infinite;
     50%{background-position:50% 0%}
     100%{background-position:0% 50%}
 }
+.imagePortion
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 .pic-size
 {
-	margin:10px;
-	border:5px solid white;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	border-radius: 5px;
-	
+	border:2px solid #fff;
+	margin: 10px 0;
+	border-radius: 2px;
+	border-bottom: 0px solid #000;
 }
 
 .pic-size img
 {
-	height:300px;
-	transform: scale(1.1);
-	transition:transform .3s;
+	width:40vw;
+	transition:opacity .2s;
 }
 .pic-size img:hover
 {
-	transform: scale(1.5) rotateZ(-15deg);
+	opacity:0.8;
 }
 .caption
 {
 	position: absolute;
 	bottom:50%;
-
 	left:50%;
 	transform: translateX(-50%);
 	padding:5px 10px;
 	color:#fff;
-	font-size: 0.8em;
+	font-size: 2vw;
 	background:#ED401B; 
 	border:2px solid #fff;
 	border-radius: 10px;
 	font-weight: bold;
 	letter-spacing: 1px;
-	cursor: hand;
+	cursor:pointer;
 	user-select: none;
 	box-shadow: 0 0 10px black;
 	opacity:0;
